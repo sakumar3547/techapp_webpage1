@@ -94,7 +94,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center pt-10 lg:pt-6">
               <HeroFolder />
-              <Eyebrow className="mt-8 text-center text-muted-foreground">Click to open · + to add yours</Eyebrow>
+              <Eyebrow className="mt-8 text-center text-muted-foreground">Click to open</Eyebrow>
             </div>
           </div>
         </section>

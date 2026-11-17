@@ -9,7 +9,7 @@ const FILES: FolderFile[] = [
   { name: "Custom app", meta: "Software", art: "ember", href: "#services" },
 ]
 
-/** The hero folder: what an engagement leaves behind. `+` drops your project in. */
+/** The hero folder: the three things we build. Click it to open. */
 export function HeroFolder() {
   return (
     <ResponsiveFolder
@@ -18,11 +18,7 @@ export function HeroFolder() {
       art="aurora"
       seed={3}
       files={FILES}
-      onAdd={(files) => ({
-        name: files.some((f) => f.name === "Your project") ? "Another idea" : "Your project",
-        meta: "Start here",
-        href: "#contact",
-      })}
+      action="none"
     />
   )
 }
