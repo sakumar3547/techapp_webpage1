@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# techapp_webpage1
 
-## Getting Started
+Tech app Universe web page prototype 1: a one-page site for custom AI automation, workflows and software, built with Next.js, TypeScript and Tailwind CSS, using the glass folder card component.
 
-First, run the development server:
+## Run it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where things are
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `lib/site.ts`: all the site's wording and contact details
+- `app/page.tsx`: the page layout
+- `components/ui/glass-folder-cards.tsx`: the folder component
+- `components/site/`: hero folder, services, contact form
+- `app/api/contact/route.ts` and `google-sheet/Code.gs`: the contact form's Google Sheet link
 
-## Learn More
+## Contact form setup
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Copy `.env.example` to `.env.local` and set `GOOGLE_SHEET_WEBHOOK_URL` to the web app URL from the Apps Script deployment in `google-sheet/Code.gs`. Until it is set, the form shows a "not connected" message.
